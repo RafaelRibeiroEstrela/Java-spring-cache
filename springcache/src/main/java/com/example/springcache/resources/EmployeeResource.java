@@ -18,14 +18,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springcache.dtos.EmployeeDTO;
-import com.example.springcache.services.PeopleService;
+import com.example.springcache.services.EmployeeService;
 
 @RestController
 @RequestMapping(value = "/employees")
-public class PeopleResource {
+public class EmployeeResource {
 	
 	@Autowired
-	private PeopleService service;
+	private EmployeeService service;
 	
 	@GetMapping
 	public ResponseEntity<List<EmployeeDTO>> findAll(){

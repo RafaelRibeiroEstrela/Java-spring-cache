@@ -13,10 +13,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.springcache.dtos.EmployeeDTO;
 import com.example.springcache.models.Employee;
 import com.example.springcache.repositories.EmployeeRepository;
-import com.example.springcache.services.PeopleService;
+import com.example.springcache.services.EmployeeService;
 
 @Service
-public class PeopleServiceImpl implements PeopleService{
+public class EmployeeServiceImpl implements EmployeeService{
 	
 	@Autowired
 	private EmployeeRepository repository;

@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.example.springcache.dtos.EmployeeDTO;
 
-public interface PeopleService {
+public interface EmployeeService {
 	
 	List<EmployeeDTO> findAll();
 	EmployeeDTO findById(Long id);
