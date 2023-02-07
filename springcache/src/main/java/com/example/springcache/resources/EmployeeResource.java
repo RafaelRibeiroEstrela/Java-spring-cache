@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.springcache.dtos.EmployeeDTO;
@@ -38,7 +38,7 @@ public class EmployeeResource {
 	}
 	
 	@GetMapping(value = "/buscar-cpf-register")
-	public ResponseEntity<EmployeeDTO> findByCpfAndRegister(@RequestParam String cpf, @RequestParam String register){
+	public ResponseEntity<EmployeeDTO> findByCpfAndRegister(@RequestHeader String cpf, @RequestHeader String register){
 		return ResponseEntity.status(HttpStatus.OK).body(service.findByCpfAndRegister(cpf, register));
 	}
 	
